@@ -1,17 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <title>Drum Keys</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grandstander:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"
+    />
+    <title>Keys Codes</title>
+  </head>
+
+  <body>
+    <a
+      href="https://github.com/parabolabam/keycode"
+      class="github__ribbon"
+      rel="noopener noreferrer"
+    >
+      <img
+        loading="lazy"
+        width="149"
+        height="149"
+        src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149"
+        class="attachment-full size-full"
+        alt="Fork me on GitHub"
+        data-recalc-dims="1"
+    /></a>
     <div id="root">
-        <div id="keyCodeContainer"></div>
-        <div id="codeContainer"></div> 
+      <div id="keyCodeContainer" class="keycode__container">
+        <div class="keycode-container__placeholder">
+          Press Any Key on Keyboard
+        </div>
+      </div>
+      <div id="cardsContainer" class="cards__container">
+        <div id="eventKey" class="cards__card">
+          <div class="card__header">
+            <div class="card-header__name">Event Key</div>
+          </div>
+          <div class="card__body"></div>
+        </div>
+        <div id="eventLocation" class="cards__card">
+          <div class="card__header">
+            <div class="card-header__name">Event Location</div>
+          </div>
+          <div class="card__body"></div>
+        </div>
+        <div id="eventWhich" class="cards__card">
+          <div class="card__header">
+            <div class="card-header__name">Event Which</div>
+          </div>
+          <div class="card__body"></div>
+        </div>
+        <div id="eventCode" class="cards__card">
+          <div class="card__header">
+            <div class="card-header__name">Event Code</div>
+          </div>
+          <div class="card__body"></div>
+        </div>
+      </div>
     </div>
-</body>
-<script src="index.js" defer async></script>
+  </body>
+  <script src="index.js" defer async></script>
 </html>
