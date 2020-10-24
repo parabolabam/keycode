@@ -17,25 +17,29 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"
     />
+    <base target="_blank" />
     <title>Keys Codes</title>
   </head>
 
   <body>
-    <a
-      href="https://github.com/parabolabam/keycode"
-      class="github__ribbon"
-      rel="noopener noreferrer"
-    >
-      <img
-        loading="lazy"
-        width="149"
-        height="149"
-        src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149"
-        class="attachment-full size-full"
-        alt="Fork me on GitHub"
-        data-recalc-dims="1"
-    /></a>
-    <div id="root">
+    <div id="overlay"><p>Press any key, please 😎</p></div>
+
+    <div id="root" class="root__invisible">
+      <a
+        href="https://github.com/parabolabam/keycode"
+        class="github__ribbon"
+        rel="noopener noreferrer"
+      >
+        <img
+          loading="lazy"
+          width="149"
+          height="149"
+          src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149"
+          class="attachment-full size-full"
+          alt="Fork me on GitHub"
+          data-recalc-dims="1"
+      /></a>
+
       <div id="keyCodeContainer" class="keycode__container">
         <div class="keycode-container__placeholder">
           Press Any Key on Keyboard
@@ -45,12 +49,12 @@
         <div id="eventKey" class="cards__card">
           <div class="card__header">
             <div class="card-header__name">Event Key</div>
-          </div>
-          <div class="card__body"></div>
-        </div>
-        <div id="eventLocation" class="cards__card">
-          <div class="card__header">
-            <div class="card-header__name">Event Location</div>
+            <div>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key"
+                rel="noopener noreferrer"
+              ></a>
+            </div>
           </div>
           <div class="card__body"></div>
         </div>
