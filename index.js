@@ -41,21 +41,11 @@ function renderMobileVersion() {
   }
   const emojiContainer = document.createElement("div");
   emojiContainer.classList.add('emoji-container--flexed');
-  emojiContainer.innerText = "🐱‍🚀";
-  overlayContent.innerText = mobileDeviceText;
+  emojiContainer.innerText = `🐱‍🚀 `;
+  overlayContent.innerText = `${mobileDeviceText} \n ${navigator.userAgent}`;
   overlayContent.appendChild(emojiContainer);
 }
 
 function isMobile() {
-  const toMatch = [
-    /Android/i,
-    /webOS/i,
-    /iPhone/i,
-    /iPad/i,
-    /iPod/i,
-    /BlackBerry/i,
-    /Windows Phone/i
-  ];
-
-  return toMatch.some((toMatchItem) => navigator.userAgent.match(toMatchItem));
+  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 }
