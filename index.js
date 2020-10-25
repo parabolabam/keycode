@@ -36,9 +36,8 @@ function onKeyDown(e) {
 }
 
 function onTouchEnd() {
-  const emojiContainer = document.createElement("div", {
-      classList: ['emoji-container--flexed']
-  });
+  const emojiContainer = document.createElement("div");
+  emojiContainer.classList.add('emoji-container--flexed');
   emojiContainer.innerText = "🐱‍🚀";
   overlayContent.innerText = mobileDeviceText;
   overlayContent.appendChild(emojiContainer);
