@@ -16,7 +16,7 @@ const eventCode = document.querySelector("#eventCode");
 const overlay = document.querySelector("#overlay");
 
 window.addEventListener("keyup", onKeyDown, false);
-window.addEventListener("touchend", onTouchEnd, false);
+window.addEventListener("load", renderMobileVersion, false);
 
 function insertInfoIntoCardBody(cardContainer, info) {
   const infoContainer = cardContainer.querySelector(".card__body");
@@ -35,10 +35,27 @@ function onKeyDown(e) {
   insertInfoIntoCardBody(eventCode, e.code);
 }
 
-function onTouchEnd() {
+function renderMobileVersion() {
+  if(!isMobile()) {
+    return;
+  }
   const emojiContainer = document.createElement("div");
   emojiContainer.classList.add('emoji-container--flexed');
   emojiContainer.innerText = "🐱‍🚀";
   overlayContent.innerText = mobileDeviceText;
   overlayContent.appendChild(emojiContainer);
+}
+
+function isMobile() {
+  const toMatch = [
+    /Android/i,
+    /webOS/i,
+    /iPhone/i,
+    /iPad/i,
+    /iPod/i,
+    /BlackBerry/i,
+    /Windows Phone/i
+  ];
+
+  return toMatch.some((toMatchItem) => navigator.userAgent.match(toMatchItem));
 }
